@@ -27,6 +27,9 @@ type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
   inverseTrigger: number // Inverse value of CDS trigger. i.e. if trigger is 0.95 -> inverse is 0.05
   subtype: EPeer2PoolInsuranceProductParamsSubtype
   isSecondaryAvailable: boolean
+  startBlock: number
+  firstEndtime: number
+  period: number
 }
 
 type TPeer2PoolInsuranceProductParamsV2 = TPeer2PoolInsuranceProductParams & {
