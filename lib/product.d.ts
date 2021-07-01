@@ -23,6 +23,9 @@ declare type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
     inverseTrigger: number;
     subtype: EPeer2PoolInsuranceProductParamsSubtype;
     isSecondaryAvailable: boolean;
+    startBlock: number;
+    firstEndtime: number;
+    period: number;
 };
 declare type TPeer2PoolInsuranceProductParamsV2 = TPeer2PoolInsuranceProductParams & {
     secondaryMarketPoolAddress: string;
