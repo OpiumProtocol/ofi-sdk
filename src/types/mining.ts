@@ -25,7 +25,7 @@ type TMiningParamsBase = {
   frequency: EMiningFrequency
 }
 
-type TMiningParams<T extends EMiningType> = TMiningParamsBase & (
+export type TMiningParams<T extends EMiningType> = TMiningParamsBase & (
   T extends EMiningType.DROPIUM_V1 ?
     {
       subgraphEntity: string
@@ -40,6 +40,7 @@ type TMiningParams<T extends EMiningType> = TMiningParamsBase & (
           title: string
           rewardTokenContractAddress: string
         }
+        totalRewardsAmount: number
       } :
         T extends EMiningType.ONEINCH_FARMING_V1 ?
         {
@@ -52,6 +53,7 @@ type TMiningParams<T extends EMiningType> = TMiningParamsBase & (
             rewardTokenContractAddress: string
             ratio: number
             includeClaimed: boolean
+            totalRewardsAmount: number
           }>
         } :
           T extends EMiningType.ONEINCH_FARMING_V1_EXTENDED ?
@@ -65,6 +67,7 @@ type TMiningParams<T extends EMiningType> = TMiningParamsBase & (
               title: string
               rewardTokenContractAddress: string
               rewardRate: number
+              totalRewardsAmount: number
             }
           } :
             T extends EMiningType.ONEINCH_OPIUM_LP_FARMING ?
@@ -77,6 +80,7 @@ type TMiningParams<T extends EMiningType> = TMiningParamsBase & (
                 title: string
                 rewardTokenContractAddress: string
                 rewardRate: number
+                totalRewardsAmount: number
               }
             } :
               TMiningParamsBase
@@ -142,6 +146,7 @@ export type TMiningAdditionalInfo<E extends EMiningType> =
               apr: number
               userRewardTotal: number
               userRewardTotalUSD: number
+              totalRewardsAmount: number
             }>
           } :
             E extends EMiningType.ONEINCH_FARMING_V1_EXTENDED ?
@@ -151,6 +156,7 @@ export type TMiningAdditionalInfo<E extends EMiningType> =
                 apr: number
                 userRewardTotal: number
                 userRewardTotalUSD: number
+                totalRewardsAmount: number
               }
             } :
               TEmptyObject

@@ -13,13 +13,19 @@ export enum EStakingRewardsPeriod {
   MONTHLY = 'MONTHLY'
 }
 
+export const CRewardsPeriodsSeconds = {
+  [EStakingRewardsPeriod.WEEKLY]: 7*3600*24,
+  [EStakingRewardsPeriod.MONTHLY]: 30*3600*24,
+  [EStakingRewardsPeriod.YEARLY]: 360*3600*24,
+}
+
 export enum EDistributionType {
   DROPIUM = 'DROPIUM',
   OTHER = 'OTHER',
 }
 
 type TStakingRewards = {
-  amount: number
+  amountPerSecond: number // per second
   period: EStakingRewardsPeriod
   distribution: EDistributionType
 } | null
@@ -32,6 +38,7 @@ export type TStaking = {
   descriptionHTML: string
   itemLinks: { [key in EExternalLinks]?: string[] }
   productId: string
+  miningId: string | null
   rewards: TStakingRewards
   rewardsTextTemplate: (apr: string) => string
   rewardsTokenAddress: string
@@ -71,5 +78,5 @@ export type TStakingParams<E extends EStakingType> =
         } :
           TEmptyObject
 
-export type TAllStakingsResponse = Array<TStaking & { userReward: number; userStaked: number; params: TStakingParams<EStakingType> }>
+export type TAllStakingsResponse = Array<TStaking & { userReward: number; userStaked: number; params: TStakingParams<EStakingType>; totalRewardsAmount: number }>
 

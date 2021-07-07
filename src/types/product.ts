@@ -82,6 +82,7 @@ export enum EProductAvgCostFrequency {
   WEEKLY = 'WEEKLY',
   ANNUAL = 'ANNUAL',
   DAILY = 'DAILY',
+  SINGLE_EPOCH = 'SINGLE_EPOCH',
 }
 
 export type TProduct<E extends EProductType> = {
@@ -96,6 +97,11 @@ export type TProduct<E extends EProductType> = {
   isFirstEpochExpired?: boolean
 }
 
+export type TPayoutChart = {
+  buyerPayout: number
+  sellerPayout: number
+  price: number
+}
 export type TEmptyObject = Record<string, never>
 
 export type TProductState<E extends EProductType> = 
