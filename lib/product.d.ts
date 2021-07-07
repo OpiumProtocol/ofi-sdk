@@ -60,7 +60,8 @@ export declare enum EProductAvgCostFrequency {
     MONTHLY = "MONTHLY",
     WEEKLY = "WEEKLY",
     ANNUAL = "ANNUAL",
-    DAILY = "DAILY"
+    DAILY = "DAILY",
+    SINGLE_EPOCH = "SINGLE_EPOCH"
 }
 export declare type TProduct<E extends EProductType> = {
     id: string;
@@ -72,6 +73,11 @@ export declare type TProduct<E extends EProductType> = {
     isTurbo: boolean;
     title: string;
     isFirstEpochExpired?: boolean;
+};
+export declare type TPayoutChart = {
+    buyerPayout: number;
+    sellerPayout: number;
+    price: number;
 };
 export declare type TEmptyObject = Record<string, never>;
 export declare type TProductState<E extends EProductType> = E extends EProductType.STAKING_POOL ? TEmptyObject : E extends EProductType.GOVERNANCE_WRAPPER ? TEmptyObject : {

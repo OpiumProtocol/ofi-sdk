@@ -10,12 +10,17 @@ export declare enum EStakingRewardsPeriod {
     YEARLY = "YEARLY",
     MONTHLY = "MONTHLY"
 }
+export declare const CRewardsPeriodsSeconds: {
+    WEEKLY: number;
+    MONTHLY: number;
+    YEARLY: number;
+};
 export declare enum EDistributionType {
     DROPIUM = "DROPIUM",
     OTHER = "OTHER"
 }
 declare type TStakingRewards = {
-    amount: number;
+    amountPerSecond: number;
     period: EStakingRewardsPeriod;
     distribution: EDistributionType;
 } | null;
@@ -29,6 +34,7 @@ export declare type TStaking = {
         [key in EExternalLinks]?: string[];
     };
     productId: string;
+    miningId: string | null;
     rewards: TStakingRewards;
     rewardsTextTemplate: (apr: string) => string;
     rewardsTokenAddress: string;
@@ -63,5 +69,6 @@ export declare type TAllStakingsResponse = Array<TStaking & {
     userReward: number;
     userStaked: number;
     params: TStakingParams<EStakingType>;
+    totalRewardsAmount: number;
 }>;
 export {};

@@ -21,7 +21,7 @@ declare type TMiningParamsBase = {
     contractAddress: string;
     frequency: EMiningFrequency;
 };
-declare type TMiningParams<T extends EMiningType> = TMiningParamsBase & (T extends EMiningType.DROPIUM_V1 ? {
+export declare type TMiningParams<T extends EMiningType> = TMiningParamsBase & (T extends EMiningType.DROPIUM_V1 ? {
     subgraphEntity: string;
     list: string | null;
 } : T extends EMiningType.UNIPOOL_LP_V1 ? {
@@ -32,6 +32,7 @@ declare type TMiningParams<T extends EMiningType> = TMiningParamsBase & (T exten
         title: string;
         rewardTokenContractAddress: string;
     };
+    totalRewardsAmount: number;
 } : T extends EMiningType.ONEINCH_FARMING_V1 ? {
     leftTokenContractAddress: string;
     rightTokenContractAddress: string;
@@ -42,6 +43,7 @@ declare type TMiningParams<T extends EMiningType> = TMiningParamsBase & (T exten
         rewardTokenContractAddress: string;
         ratio: number;
         includeClaimed: boolean;
+        totalRewardsAmount: number;
     }>;
 } : T extends EMiningType.ONEINCH_FARMING_V1_EXTENDED ? {
     leftTokenContractAddress: string;
@@ -53,6 +55,7 @@ declare type TMiningParams<T extends EMiningType> = TMiningParamsBase & (T exten
         title: string;
         rewardTokenContractAddress: string;
         rewardRate: number;
+        totalRewardsAmount: number;
     };
 } : T extends EMiningType.ONEINCH_OPIUM_LP_FARMING ? {
     marginTokenAddress: string;
@@ -63,6 +66,7 @@ declare type TMiningParams<T extends EMiningType> = TMiningParamsBase & (T exten
         title: string;
         rewardTokenContractAddress: string;
         rewardRate: number;
+        totalRewardsAmount: number;
     };
 } : TMiningParamsBase);
 export declare type TMining<T extends EMiningType> = {
@@ -114,6 +118,7 @@ export declare type TMiningAdditionalInfo<E extends EMiningType> = E extends EMi
         apr: number;
         userRewardTotal: number;
         userRewardTotalUSD: number;
+        totalRewardsAmount: number;
     }>;
 } : E extends EMiningType.ONEINCH_FARMING_V1_EXTENDED ? {
     apr: {
@@ -121,6 +126,7 @@ export declare type TMiningAdditionalInfo<E extends EMiningType> = E extends EMi
         apr: number;
         userRewardTotal: number;
         userRewardTotalUSD: number;
+        totalRewardsAmount: number;
     };
 } : TEmptyObject;
 export declare type TMiningResponse = TMining<EMiningType> & {
