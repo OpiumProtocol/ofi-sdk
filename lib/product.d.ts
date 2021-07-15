@@ -61,7 +61,8 @@ export declare enum EProductAvgCostFrequency {
     WEEKLY = "WEEKLY",
     ANNUAL = "ANNUAL",
     DAILY = "DAILY",
-    SINGLE_EPOCH = "SINGLE_EPOCH"
+    SINGLE_EPOCH = "SINGLE_EPOCH",
+    PER_3_DAYS = "PER_3_DAYS"
 }
 export declare type TProduct<E extends EProductType> = {
     id: string;
