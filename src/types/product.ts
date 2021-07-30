@@ -19,6 +19,11 @@ export enum EPeer2PoolInsuranceProductParamsSubtype {
   SINGLE_EPOCH = 'SINGLE_EPOCH',
 }
 
+export enum ChartEnum {
+  ANALYTICS_CHART = 'ANALYTICS_CHART',
+  PNL_CHART = 'PNL_CHART'
+}
+
 type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
   nominal: number
   title: string
@@ -30,6 +35,13 @@ type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
   startBlock: number
   firstEndtime: number
   period: number
+  chartInfo: { [key in ChartEnum]?: TChartLabels } | null
+}
+
+type TChartLabels = {
+  title: string
+  xLabel: string
+  yLabel: string
 }
 
 type TPeer2PoolInsuranceProductParamsV2 = TPeer2PoolInsuranceProductParams & {
