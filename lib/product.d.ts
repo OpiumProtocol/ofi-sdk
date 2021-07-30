@@ -15,6 +15,10 @@ export declare enum EPeer2PoolInsuranceProductParamsSubtype {
     OPTION_PUT_REAL = "OPTION_PUT_REAL",
     SINGLE_EPOCH = "SINGLE_EPOCH"
 }
+export declare enum ChartEnum {
+    ANALYTICS_CHART = "ANALYTICS_CHART",
+    PNL_CHART = "PNL_CHART"
+}
 declare type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
     nominal: number;
     title: string;
@@ -26,6 +30,14 @@ declare type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
     startBlock: number;
     firstEndtime: number;
     period: number;
+    chartInfo: {
+        [key in ChartEnum]?: TChartLabels;
+    } | null;
+};
+declare type TChartLabels = {
+    title: string;
+    xLabel: string;
+    yLabel: string;
 };
 declare type TPeer2PoolInsuranceProductParamsV2 = TPeer2PoolInsuranceProductParams & {
     secondaryMarketPoolAddress: string;
