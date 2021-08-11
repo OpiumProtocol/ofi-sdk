@@ -98,5 +98,7 @@ export declare type TProductState<E extends EProductType> = E extends EProductTy
     stakingPhaseLength: number;
     tradingPhaseLength: number;
     currentEpochTimestamp: number;
+    isWithdrawalsEnabled: boolean;
+    idleStakingTimeLimit: number;
 };
 export {};

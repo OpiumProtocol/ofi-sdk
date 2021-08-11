@@ -126,4 +126,6 @@ export type TProductState<E extends EProductType> =
         stakingPhaseLength: number
         tradingPhaseLength: number
         currentEpochTimestamp: number
+        isWithdrawalsEnabled: boolean
+        idleStakingTimeLimit: number
       }
