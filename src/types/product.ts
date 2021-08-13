@@ -16,6 +16,7 @@ export enum EPeer2PoolInsuranceProductParamsSubtype {
   BOND = 'BOND',
   OPTION_CALL_REAL = 'OPTION_CALL_REAL',
   OPTION_PUT_REAL = 'OPTION_PUT_REAL',
+  OPTION_PUT_REALT = 'OPTION_PUT_REALT',
   SINGLE_EPOCH = 'SINGLE_EPOCH',
 }
 
