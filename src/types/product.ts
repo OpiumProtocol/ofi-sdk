@@ -36,6 +36,7 @@ type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
   startBlock: number
   firstEndtime: number
   period: number
+  collateralization: number
   chartInfo: { [key in ChartEnum]?: TChartLabels } | null
 }
 
