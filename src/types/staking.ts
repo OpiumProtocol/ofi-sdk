@@ -59,6 +59,7 @@ export type TStakingParams<E extends EStakingType> =
       hardcap: number
       yieldToDate: number
       yieldToDateAnnualized: number
+      mintedAmount: number
     } :
       E extends EStakingType.STAKING_POOL ?
         {
