@@ -51,6 +51,7 @@ export declare type TStakingParams<E extends EStakingType> = E extends EStakingT
     hardcap: number;
     yieldToDate: number;
     yieldToDateAnnualized: number;
+    mintedAmount: number;
 } : E extends EStakingType.STAKING_POOL ? {
     currentEpoch: number;
     totalEpochs: number;
