@@ -35,6 +35,7 @@ declare type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
     chartInfo: {
         [key in ChartEnum]?: TChartLabels;
     } | null;
+    ticker?: string;
 };
 declare type TChartLabels = {
     title: string;
