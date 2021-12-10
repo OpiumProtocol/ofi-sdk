@@ -38,6 +38,7 @@ type TPeer2PoolInsuranceProductParams = TPeer2PoolProductParams & {
   period: number
   collateralization: number
   chartInfo: { [key in ChartEnum]?: TChartLabels } | null
+  ticker?: string
 }
 
 type TChartLabels = {
