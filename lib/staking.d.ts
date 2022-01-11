@@ -39,6 +39,7 @@ export declare type TStaking = {
     rewardsTextTemplate: (apr: string) => string;
     rewardsTokenAddress: string;
     isSuspended: boolean;
+    isExperimented: boolean;
 };
 export declare type TEmptyObject = Record<string, never>;
 export declare type TStakingParams<E extends EStakingType> = E extends EStakingType.PEER_2_POOL_POOLED ? {
