@@ -43,6 +43,7 @@ export type TStaking = {
   rewardsTextTemplate: (apr: string) => string
   rewardsTokenAddress: string
   isSuspended: boolean
+  isExperimented: boolean
 }
 
 export type TEmptyObject = Record<string, never>
