@@ -18,6 +18,7 @@ export declare type TToken = {
     title: string;
     decimals: number;
     address: string;
+    image: string;
 };
 export declare type TConstructorDB = {
     syntheticIds: TSyntheticId[];

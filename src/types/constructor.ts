@@ -20,6 +20,7 @@ export type TToken = {
   title: string
   decimals: number
   address: string
+  image: string
 }
 
 export type TConstructorDB = {
