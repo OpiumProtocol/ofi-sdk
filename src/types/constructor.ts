@@ -11,6 +11,8 @@ export type TOracleId = {
   id: string
   title: string
   ticker: string
+  underlyingAsset: string
+  referenceAsset: string
   address: string
   show: boolean
 }
