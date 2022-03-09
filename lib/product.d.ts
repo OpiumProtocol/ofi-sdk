@@ -69,6 +69,7 @@ declare type TProductParamsBase = {
     lpLogo: string | null;
     protectionLogo: string | null;
     createdAt: number | null;
+    collateralization: number;
 };
 export declare type TProductParams<E extends EProductType> = TProductParamsBase & (E extends EProductType.PEER_2_POOL_INSURANCE ? TPeer2PoolInsuranceProductParams : E extends EProductType.PEER_2_POOL_INSURANCE_V2 ? TPeer2PoolInsuranceProductParamsV2 : E extends EProductType.PEER_2_POOL_COMPOUND_FIXED_RATE ? TPeer2PoolCompoundFixedRateParams : TProductParamsBase);
 export declare enum EProductAvgCostFrequency {
