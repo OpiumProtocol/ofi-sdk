@@ -4,6 +4,7 @@ export type TSyntheticId = {
   ticker: string
   address: string
   authorFee: number
+  authorAddress: string
   show: boolean
 }
 
