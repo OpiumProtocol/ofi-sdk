@@ -80,7 +80,6 @@ type TProductParamsBase = {
   lpLogo: string | null
   protectionLogo: string | null
   createdAt: number | null
-  collateralization: number
 }
 
 export type TProductParams<E extends EProductType> = TProductParamsBase & (
