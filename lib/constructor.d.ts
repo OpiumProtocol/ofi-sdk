@@ -15,6 +15,8 @@ export declare type TOracleId = {
     referenceAsset: string;
     address: string;
     show: boolean;
+    underlyingImage: string;
+    referenceImage: string;
 };
 export declare type TToken = {
     id: string;

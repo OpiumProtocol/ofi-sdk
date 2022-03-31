@@ -16,6 +16,8 @@ export type TOracleId = {
   referenceAsset: string
   address: string
   show: boolean
+  underlyingImage: string
+  referenceImage: string
 }
 
 export type TToken = {
