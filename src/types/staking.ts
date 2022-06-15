@@ -80,5 +80,5 @@ export type TStakingParams<E extends EStakingType> =
         } :
           TEmptyObject
 
-export type TAllStakingsResponse = Array<TStaking & { userReward: number; userStaked: number; params: TStakingParams<EStakingType>; totalRewardsAmount: number }>
+export type TAllStakingsResponse = Array<TStaking & { userReward: number; userStaked: number; userPremium: number; params: TStakingParams<EStakingType>; totalRewardsAmount: number }>
 
