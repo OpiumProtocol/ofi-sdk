@@ -70,6 +70,7 @@ export declare type TStakingParams<E extends EStakingType> = E extends EStakingT
 export declare type TAllStakingsResponse = Array<TStaking & {
     userReward: number;
     userStaked: number;
+    userPremium: number;
     params: TStakingParams<EStakingType>;
     totalRewardsAmount: number;
 }>;
