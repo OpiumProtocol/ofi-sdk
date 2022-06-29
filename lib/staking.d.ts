@@ -67,11 +67,14 @@ export declare type TStakingParams<E extends EStakingType> = E extends EStakingT
     seniorTrancheSize: number;
     hardcap: number;
 } : TEmptyObject;
-export declare type TAllStakingsResponse = Array<TStaking & {
+export declare type TStakinResponseAdditions = {
     userReward: number;
     userStaked: number;
     userPremium: number;
+    userPerformancePercent: number;
+    userPerformanceMargin: number;
     params: TStakingParams<EStakingType>;
     totalRewardsAmount: number;
-}>;
+};
+export declare type TAllStakingsResponse = Array<TStaking & TStakinResponseAdditions>;
 export {};
