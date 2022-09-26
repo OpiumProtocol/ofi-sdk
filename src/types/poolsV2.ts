@@ -7,40 +7,40 @@ export enum EPhase {
 }
 
 export type TPoolDBData = {
-  id: String
-  title: String
-  benchmark: Number
-  poolRegistryAddress: String
-  descriptionHTML: String
-  isExperimental: Boolean
-  isSuspended: Boolean
+  id: string
+  title: string
+  benchmark: number
+  poolRegistryAddress: string
+  descriptionHTML: string
+  isExperimental: boolean
+  isSuspended: boolean
 }
 
 export type TPool = TAccountingData & TStakingData & TPoolDBData & {
   phases: TPhases
   poolModules: TPoolModules
-  userPerformanceMargin?: Number
-  userPerformancePercent?: Number
-  userPremium?: Number
-  yieldToDate?: Number
-  yieldToDateAnnualized?: Number
+  userPerformanceMargin?: number
+  userPerformancePercent?: number
+  userPremium?: number
+  yieldToDate?: number
+  yieldToDateAnnualized?: number
 }
 
 export type TAccountingData = {
-  managementFee: Number
-  marginAddress: String
-  marginDecimals: Number
-  marginTitle: String
-  performanceFee: Number
-  poolSize: Number
-  poolUtilization: Number
+  managementFee: number
+  marginAddress: string
+  marginDecimals: number
+  marginTitle: string
+  performanceFee: number
+  poolSize: number
+  poolUtilization: number
 }
 
 export type TPhases = {
-  currentEpochStarted: Number
-  currentEpochTimestamp: Number
+  currentEpochStarted: number
+  currentEpochTimestamp: number
   currentPhase: EPhase
-  currentPhaseTimestamp: Number
+  currentPhaseTimestamp: number
   phasesLength?: number[]
 }
 
@@ -52,17 +52,17 @@ export type TPoolLensData = {
 }
 
 export type TPoolModules = {
-  accountingAddress: String
-  lifecycleAddress: String
-  stakingAddress: String
-  strategyAddress: String
-  vaultAddress: String
+  accountingAddress: string
+  lifecycleAddress: string
+  stakingAddress: string
+  strategyAddress: string
+  vaultAddress: string
 }
 
 export type TStakingData = {
-  claimableAssets?: Number
-  claimableShares?: Number
-  pendingStake?: Number
-  pendingWithdrawal?: Number
-  userStaked?: Number
+  claimableAssets?: number
+  claimableShares?: number
+  pendingStake?: number
+  pendingWithdrawal?: number
+  userStaked?: number
 }
