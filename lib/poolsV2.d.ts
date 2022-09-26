@@ -4,7 +4,7 @@ export declare enum EPhase {
     Staking = "STAKING",
     Trading = "TRADING"
 }
-export declare type PoolDBData = {
+export declare type TPoolDBData = {
     id: String;
     title: String;
     benchmark: Number;
@@ -13,7 +13,7 @@ export declare type PoolDBData = {
     isExperimental: Boolean;
     isSuspended: Boolean;
 };
-export declare type Pool = TAccountingData & TStakingData & PoolDBData & {
+export declare type TPool = TAccountingData & TStakingData & TPoolDBData & {
     phases: TPhases;
     poolModules: TPoolModules;
     userPerformanceMargin?: Number;

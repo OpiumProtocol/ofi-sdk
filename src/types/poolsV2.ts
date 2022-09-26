@@ -6,7 +6,7 @@ export enum EPhase {
   Trading = 'TRADING'
 }
 
-export type PoolDBData = {
+export type TPoolDBData = {
   id: String
   title: String
   benchmark: Number
@@ -16,7 +16,7 @@ export type PoolDBData = {
   isSuspended: Boolean
 }
 
-export type Pool = TAccountingData & TStakingData & PoolDBData & {
+export type TPool = TAccountingData & TStakingData & TPoolDBData & {
   phases: TPhases
   poolModules: TPoolModules
   userPerformanceMargin?: Number
