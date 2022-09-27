@@ -14,6 +14,7 @@ export type TPoolDBData = {
   descriptionHTML: string
   isExperimental: boolean
   isSuspended: boolean
+  createdAt: number
 }
 
 export type TPool = TAccountingData & TStakingData & TPoolDBData & {

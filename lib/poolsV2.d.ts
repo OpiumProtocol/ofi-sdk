@@ -12,6 +12,7 @@ export declare type TPoolDBData = {
     descriptionHTML: string;
     isExperimental: boolean;
     isSuspended: boolean;
+    createdAt: number;
 };
 export declare type TPool = TAccountingData & TStakingData & TPoolDBData & {
     phases: TPhases;
