@@ -15,6 +15,7 @@ export type TPoolDBData = {
   isExperimental: boolean
   isSuspended: boolean
   createdAt: number
+  strategyId: string
 }
 
 export type TPool = TAccountingData & TStakingData & TPoolDBData & {
