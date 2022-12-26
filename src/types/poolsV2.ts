@@ -15,6 +15,7 @@ export type TPoolDBData = {
   isExperimental: boolean
   isSuspended: boolean
   createdAt: number
+  deploymentBlock: number
   strategyId: string
 }
 
